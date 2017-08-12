@@ -12,7 +12,7 @@ export default class App extends React.Component {
         return (
             <View style={styles.container}>
                 <Button
-                    onPress={() => navigate('SecondScreen')}
+                    onPress={() => navigate('Second')}
                     title="Go to Second Screen"
                 />
                 <Text style={styles.welcome}>

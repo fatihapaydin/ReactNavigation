@@ -23,7 +23,7 @@ export default class Yeniden extends React.Component {
 
 const SimpleApp = StackNavigator({
   Home: { screen: Yeniden },
-  SecondScreen: { screen: SecondScreen }
+  Second: { screen: SecondScreen }
 });
 
 AppRegistry.registerComponent('Yeniden', () => SimpleApp);

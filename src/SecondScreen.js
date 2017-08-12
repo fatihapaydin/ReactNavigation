@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, AppRegistry } from 'react-native';
+import { StyleSheet, Text, View, AppRegistry, Button } from 'react-native';
 
 
 export default class SecondScreen extends React.Component {
     static navigationOptions = {
-        title: 'Second Screen Title'
+        title: 'Second Screen Başlığı'
     };
 
     render() {
+        const { navigate } = this.props.navigation;
+
         return (
+
             <View style={styles.container}>
+                <Button
+                    onPress={() => navigate('Home')}
+                    title="Go to Home"
+                />
                 <Text style={styles.welcome}>
                     THIS IS THE SECOND SCREEN!
-              </Text>
+                </Text>
+
             </View>
         );
     }
