@@ -4,7 +4,11 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
+		"test": "jest",
+		"tsc": "tsc",
+		"clean": "rimraf artifacts",
+		"build": "npm run clean && npm run tsc --",
+		"watch": "npm run build -- -w"
 	},
 	"dependencies": {
 		"react": "16.0.0-alpha.12",
@@ -12,10 +16,17 @@
 		"react-navigation": "^1.0.0-beta.11"
 	},
 	"devDependencies": {
+		"@types/jest": "^18.1.1",
+		"@types/react": "^16.0.2",
+		"@types/react-native": "^0.47.2",
+		"@types/react-navigation": "^1.0.17",
 		"babel-jest": "20.0.3",
 		"babel-preset-react-native": "2.1.0",
+		"concurrently": "^3.5.0",
 		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.12"
+		"react-test-renderer": "16.0.0-alpha.12",
+		"rimraf": "^2.6.1",
+		"typescript": "^2.4.2"
 	},
 	"jest": {
 		"preset": "react-native"

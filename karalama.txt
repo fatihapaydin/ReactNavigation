@@ -1,0 +1,23 @@
+const stackNavigatorScreenOptions: NavigationStackScreenOptions = {
+    title: 'title',
+};
+
+const stackNavigatorConfig: StackNavigatorConfig = {
+    mode: "card",
+    headerMode: "screen",
+    navigationOptions: stackNavigatorScreenOptions,
+};
+
+const BasicStackNavigator = StackNavigator(
+    routeConfigMap,
+    stackNavigatorConfig,
+);
+
+function renderBasicStackNavigator(): JSX.Element {
+    return (
+        <BasicStackNavigator
+            ref={(ref: any) => { }}
+            style={viewStyle}
+        />
+    );
+}
